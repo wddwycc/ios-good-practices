@@ -274,6 +274,8 @@ Otherwise, you may encounter strange bugs when the system doesn't call `updateCo
 [wwdc-autolayout-mysteries]: https://developer.apple.com/videos/wwdc/2015/?id=219
 [edward-huynh-requiresconstraintbasedlayout]: http://www.edwardhuynh.com/blog/2013/11/24/the-mystery-of-the-requiresconstraintbasedlayout/
 
+** Notice, this only happens when you initialize your App with code instead of Storyboard. If you initialize with a Storyboard, `updateConstraints() in subviews` would always be called automatically. **
+
 ### Controllers
 
 Use dependency injection, i.e. pass any required objects in as parameters, instead of keeping all state around in singletons. The latter is okay only if the state _really_ is global.
